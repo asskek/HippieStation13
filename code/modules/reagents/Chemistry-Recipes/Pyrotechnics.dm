@@ -44,7 +44,7 @@
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
 	world<<"created [created_volume] holyboom"
-	if(created_volume >= 150)
+	if(created_volume >= 100)
 		playsound(get_turf(holder.my_atom), 'sound/effects/pray.ogg', 80, 0, round(created_volume/48))
 		message_admins("A holy explosion has occurred at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[H.x];Y=[H.y];Z=[H.z]'>([H.x],[H.y],[H.z])</a> last touched by [key_name_admin(H.fingerprintslast)]")
 		log_game("A holy explosion has occurred at <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[H.x];Y=[H.y];Z=[H.z]'>([H.x],[H.y],[H.z])</a> last touched by [key_name_admin(H.fingerprintslast)]")
